@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle of Us | Our Love Story</title>
+    <meta name="description" content="An interactive anniversary puzzle revealing our cherished memories together" />
+    <meta name="author" content="Levianthz" />
+    <meta property="og:title" content="Puzzle of Us | Our Love Story" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" class="music-toggle hidden" aria-label="Play music">
+        <svg class="icon volume-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <svg class="icon volume-off hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <header class="header">
+            <h1 class="title">Kisah Cinta kita dalam Kepingan Puzzle Memory ♥️</h1>
+            <p class="subtitle">Tap any tile to reveal a cherished memory</p>
+        </header>
+
+        <!-- Puzzle Grid -->
+        <div class="puzzle-wrapper">
+            <div id="puzzle-grid" class="puzzle-grid"></div>
+        </div>
+    </main>
+
+    <!-- Letter Panel (Drawer) -->
+    <div id="letter-panel" class="letter-panel-overlay hidden">
+        <div class="letter-panel-backdrop"></div>
+        <div class="letter-panel" role="dialog" aria-modal="true">
+            <button class="close-button" aria-label="Close panel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="letter-panel-content">
+                <div class="photo-container">
+                    <div class="photo-loading">
+                        <div class="spinner"></div>
+                    </div>
+                    <img id="panel-photo" class="panel-photo hidden" alt="" />
+                </div>
+
+                <div class="letter-content">
+                    <h2 id="panel-title" class="panel-title"></h2>
+                    <p id="panel-letter" class="panel-letter"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti" class="confetti-container"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
